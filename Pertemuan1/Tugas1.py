@@ -1,5 +1,5 @@
+# Fungsi untuk menampilkan hitungan mundur dari number hingga 0.
 def hitung_mundur(number):
-    """Fungsi untuk menampilkan hitungan mundur dari n hingga 0."""
     while number >= 0:  
         print(number, end=" ")  
         number -= 1  
