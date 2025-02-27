@@ -15,17 +15,13 @@ class Koordinat3D(Koordinat2D):
 
     def tampilkan_koord(self):
         print('x =', self.x)
-        print('y =', getattr(self, 'y', 'Tidak Ada'))  # Cek apakah y ada
-        print('z =', getattr(self, 'z', 'Tidak Ada'))  # Cek apakah z ada
+        print('y =', self.y)  
+        print('z =', self.z)  
 
 titik1 = Koordinat3D(1, 2, 3)
 titik1.tampilkan_koord()
 
 del Koordinat2D.y
 del titik1.y
-print("\nEfek penghapusan atribut dari class dan instance")
-
-try:
-    titik1.tampilkan_koord()
-except AttributeError as e:
-    print(f"Terjadi error: {e}")
+print('Efek keyword del')
+titik1.tampilkan_koord()
