@@ -13,7 +13,7 @@ class Employee(Person):
         return True
       
 emp = Person("Slamet")
-print(emp.getName(), emp.isEmployee())  # Output: Slamet False
+print(emp.getName(), emp.isEmployee())  
 
 emp = Employee("Santoso")
-print(emp.getName(), emp.isEmployee())  # Output: Santoso True
+print(emp.getName(), emp.isEmployee())  
