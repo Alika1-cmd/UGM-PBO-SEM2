@@ -22,7 +22,7 @@ class MahasiswaS1(Mahasiswa):
 
     def tampilkan_info(self):
         super().tampilkan_info()
-        print("Skripsi  :", self.skripsi)  # Akan error jika atribut skripsi dihapus
+        print("Skripsi  :", self.skripsi) 
 
 mhs1 = MahasiswaS1("Indira", "2201001", "Biologi", "Penerapan kambium dalam Kesehatan")
 mhs1.tampilkan_info()
