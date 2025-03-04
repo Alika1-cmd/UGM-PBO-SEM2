@@ -7,15 +7,20 @@ class Mahasiswa:
         print(f"Nama: {self.nama}, NIM: {self.nim}")
 
 mhs1 = Mahasiswa("indira", "22012345")
-print("Sebelum atribut dihapus:")
 mhs1.tampilkan_info()
 
 delattr(mhs1, "nim")
 
 print("\nSetelah atribut 'nim' dihapus:")
-mhs1.tampilkan_info() 
+try:
+    mhs1.tampilkan_info()
+except AttributeError as e:
+    print(f"Terjadi error: {e}")
 
 del mhs1
 
 print("\nSetelah objek dihapus:")
-mhs1.tampilkan_info()  
+try:
+    mhs1.tampilkan_info()
+except NameError as e:
+    print(f"Terjadi error: {e}")
