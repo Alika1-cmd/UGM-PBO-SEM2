@@ -1,29 +1,34 @@
 class Mahasiswa:
-    def __init__(self, nama, nim):
+    nama = ""
+    nim = ""
+    jurusan = ""
+
+    def __init__(self, nama, nim, jurusan):
         self.nama = nama
         self.nim = nim
+        self.jurusan = jurusan
 
     def tampilkan_info(self):
-        try:
-            print(f"Nama: {self.nama}, NIM: {self.nim}")
-        except AttributeError:
-            print("Atribut telah dihapus dan tidak bisa diakses.")
+        print("Nama     :", self.nama)
+        print("NIM      :", self.nim)
+        print("Jurusan  :", self.jurusan)
 
-mhs1 = Mahasiswa("Indira", "22012345")
+class MahasiswaS1(Mahasiswa):
+    skripsi = ""
+
+    def __init__(self, nama, nim, jurusan, skripsi):
+        super().__init__(nama, nim, jurusan)
+        self.skripsi = skripsi
+
+    def tampilkan_info(self):
+        super().tampilkan_info()
+        print("Skripsi  :", self.skripsi)  # Akan error jika atribut skripsi dihapus
+
+mhs1 = MahasiswaS1("Indira", "2201001", "Biologi", "Penerapan kambium dalam Kesehatan")
 mhs1.tampilkan_info()
 
-del mhs1.nim
+# Menghapus atribut skripsi
+del mhs1.skripsi
 
-print("\nSetelah atribut 'nim' dihapus:")
-try:
-    print(f"NIM: {mhs1.nim}")  # Ini akan menyebabkan AttributeError
-except AttributeError:
-    print("Error: Atribut 'nim' telah dihapus.")
-
-del mhs1
-
-print("\nSetelah objek dihapus:")
-try:
-    mhs1.tampilkan_info()  # Ini akan menyebabkan NameError
-except NameError:
-    print("Error: Objek telah dihapus dan tidak bisa diakses.")
+print("\nSetelah atribut skripsi dihapus:")
+mhs1.tampilkan_info() 
