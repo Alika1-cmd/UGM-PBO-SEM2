@@ -28,7 +28,7 @@ class Teacher(Person):
         return f"Guru: {self.name}, Umur: {self.age}, Mata Pelajaran: {self.subject}"
 
 # Membuat objek siswa dan guru
-siswa1 = Student("Gadis", 18, "IPA")
+siswa1 = Student("Gadis", 18, "C4N71K")
 guru1 = Teacher("Bu Agustina", 35, "Matematika")
 
 # Menampilkan informasi peran 
