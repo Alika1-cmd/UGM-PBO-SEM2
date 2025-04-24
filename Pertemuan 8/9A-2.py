@@ -1,5 +1,5 @@
 class Anime:
-    GENRES = ('comedy', 'Horror', 'Sci-fi', 'Action', 'Romance', 'Mystery')
+    GENRES = ('Comedy', 'Horror', 'Sci-fi', 'Action', 'Romance', 'Mystery')
 
     def __init__(self, judul_anime, studio):
         self.judul_anime = judul_anime
@@ -18,7 +18,7 @@ class Anime:
 
     @staticmethod
     def allowed_genres_ending_with(letter):
-        return [g for g in Book.GENRES if g.endswith(letter)]
+        return [g for g in Anime.GENRES if g.endswith(letter)]
 
 
 anime = Anime("Assasination Classroom", "Lerche")
@@ -27,7 +27,7 @@ print(anime.judul_lengkap())
 print(anime.judul_lengkap2)        
 
 print(anime.allowed_genres_starting_with("F"))     
-print(Anime.allowed_genres_starting_with("S"))    
+print(Anime.allowed_genres_starting_with("C"))    
 
 print(anime.allowed_genres_ending_with("e"))     
-print(Anime.allowed_genres_ending_with("n"))  
+print(Anime.allowed_genres_ending_with("y"))  
